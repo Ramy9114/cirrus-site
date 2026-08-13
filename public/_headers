@@ -1,18 +1,24 @@
-# Response headers applied by Cloudflare Pages.
+# Response headers applied at the edge.
 #
 # The CSP is deliberately near-total: both pages are self-contained HTML with an
-# inline <style> block and load NO external resources — no scripts, no fonts, no
-# images, no analytics. `default-src 'none'` is therefore accurate rather than
-# aspirational, and it should FAIL LOUDLY if anyone later adds a tracker or a
-# webfont to a privacy policy page, which is exactly the point.
+# inline <style> block and load nothing from anywhere else — no scripts, no fonts,
+# no analytics. `default-src 'none'` is therefore accurate rather than aspirational,
+# and it should FAIL LOUDLY if anyone later adds a tracker or a webfont to a privacy
+# policy page, which is exactly the point.
 #
-# `style-src 'unsafe-inline'` is required only because the CSS is inlined in each
-# page. Outbound links (Google, Apple, CNIL) are navigations, not resource loads,
-# so they are unaffected by any of this.
+# Two narrow allowances, and only two:
+#   style-src 'unsafe-inline' — the CSS is inlined in each page.
+#   img-src 'self'            — the logo, served from this origin. Deliberately NOT
+#                               a wildcard: a remote image is a tracking pixel by
+#                               another name, and on a privacy policy that would be
+#                               self-refuting.
+#
+# Outbound links (Google, Apple, CNIL) are navigations, not resource loads, so they
+# are unaffected by any of this.
 
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(), camera=(), microphone=(), interest-cohort=()
-  Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'

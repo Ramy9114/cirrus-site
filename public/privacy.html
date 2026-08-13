@@ -34,6 +34,17 @@
     -webkit-text-size-adjust: 100%;
   }
   main { max-width: 44rem; margin: 0 auto; }
+  /* Masthead, and also the way back to the site root — this page is frequently the
+     first and only page anyone lands on, reached from the App Store listing or from
+     inside the app itself. */
+  .masthead { display: block; line-height: 0; margin: 0 0 1.75rem; }
+  .masthead img { width: 132px; max-width: 46%; height: auto; }
+  /* Cream-on-transparent artwork drawn for a dark ground; darkened here rather than
+     shipping a second asset, so there is one logo file shared with the app's own
+     SplashLogo. */
+  @media (prefers-color-scheme: light) {
+    .masthead img { filter: brightness(.32) saturate(1.45); }
+  }
   h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -0.02em; }
   h2 {
     font-size: 1.15rem; margin: 2.75rem 0 .75rem; letter-spacing: -0.01em;
@@ -68,6 +79,8 @@
 </head>
 <body>
 <main>
+
+  <a class="masthead" href="/"><img src="/logo.png" alt="Cirrus" width="420" height="260"></a>
 
   <h1>Cirrus Privacy Policy</h1>
   <p class="updated">Last updated: 13 August 2026</p>
