@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Cirrus</title>
+<style>
+  :root {
+    --bg: #16140f;
+    --surface: #201d17;
+    --text: #f2ede3;
+    --muted: #b8ae9c;
+    --accent: #d9ab74;
+    --rule: #35302708;
+    --border: #353027;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #faf8f4;
+      --surface: #ffffff;
+      --text: #1c1a15;
+      --muted: #5f5849;
+      --accent: #9a6b2f;
+      --border: #e4ded2;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -0.02em; }
+  h2 {
+    font-size: 1.15rem; margin: 2.75rem 0 .75rem; letter-spacing: -0.01em;
+    padding-top: 1.25rem; border-top: 1px solid var(--border);
+  }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--accent); }
+  .updated { color: var(--muted); font-size: .875rem; margin: 0 0 2rem; }
+  .summary {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem 1.35rem; margin: 0 0 1rem;
+  }
+  .summary h2 { margin-top: 0; padding-top: 0; border-top: none; font-size: 1.05rem; }
+  .summary ul { margin: .5rem 0 0; padding-left: 1.15rem; }
+  .summary li { margin: .45rem 0; }
+  ul, ol { padding-left: 1.35rem; }
+  li { margin: .4rem 0; }
+  a { color: var(--accent); }
+  code {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: .1rem .35rem; border-radius: 4px; font-size: .875em;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .925rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+  .fill {
+    background: #b3541e22; border: 1px dashed var(--accent);
+    padding: .15rem .45rem; border-radius: 4px; font-weight: 600;
+  }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .875rem; }
+  .table-wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Cirrus Privacy Policy</h1>
+  <p class="updated">Last updated: 13 August 2026</p>
+
+  <div class="summary">
+    <h2>The short version</h2>
+    <ul>
+      <li><strong>Your health data never leaves your iPhone.</strong> Cirrus reads it from Apple Health, computes your recovery score on the device, and stores the result on the device. We never receive it, and we could not access it if we wanted to.</li>
+      <li><strong>You don't need an account.</strong> The app works fully without one. Signing in is optional and stores nothing on our servers.</li>
+      <li><strong>We run no analytics and no advertising.</strong> There is no tracking SDK, no crash reporter, and no advertising identifier in the app.</li>
+      <li><strong>We never sell your data.</strong> There is nothing to sell — we don't hold it.</li>
+      <li><strong>One thing does reach us:</strong> when the app downloads Playbook articles, that request reveals your IP address to our content host, the same way visiting any website does. Details in <a href="#leaves">“What leaves your device”</a>.</li>
+    </ul>
+  </div>
+
+  <h2 id="who">1. Who is responsible for your data</h2>
+  <p>
+    The data controller for Cirrus is
+    <span class="fill">⚠️ TO FILL IN — controller name</span>,
+    based in Paris, France.
+  </p>
+  <p>
+    For anything in this policy — questions, requests, complaints — write to
+    <span class="fill">⚠️ TO FILL IN — privacy email</span>.
+    We aim to reply within 30 days, which is the deadline the GDPR sets.
+  </p>
+
+  <h2 id="health">2. Health data</h2>
+  <p>
+    Cirrus reads the following from Apple Health, with your explicit permission, which you grant
+    through Apple's own permission screen and can withdraw at any time in iOS Settings → Health →
+    Data Access &amp; Devices → Cirrus:
+  </p>
+  <ul>
+    <li>Resting heart rate</li>
+    <li>Walking heart rate average</li>
+    <li>Heart rate variability (SDNN)</li>
+    <li>Respiratory rate</li>
+    <li>Blood oxygen saturation</li>
+    <li>Active energy burned</li>
+    <li>Sleep analysis (time in bed, awake, core, deep and REM stages)</li>
+    <li>Workouts (type, start time, duration, energy burned, average heart rate)</li>
+  </ul>
+  <p>
+    Cirrus only <em>reads</em> from Apple Health. It never writes anything back.
+  </p>
+  <p>
+    All of it is processed <strong>on your device</strong>, by code running on your iPhone, to
+    produce a daily recovery score between 0 and 100 and a breakdown of the factors behind it.
+    <strong>None of this data is transmitted to us or to anyone else.</strong> There is no server
+    that receives it. We have no copy of it, no backup of it, and no ability to retrieve it.
+  </p>
+  <p>
+    Because this processing happens entirely on your own device, under your control, and we can
+    never access the results, French data protection guidance (CNIL, Deliberation n° 2025-024)
+    treats an app of this shape as software you operate rather than a service we run. We describe
+    it here in full regardless, because you are entitled to know what the app does with your data
+    whether or not we are legally the controller of that particular step.
+  </p>
+
+  <h2 id="stored">3. What Cirrus stores on your device</h2>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>What</th><th>Where</th><th>Kept for</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Your daily recovery score, the factor breakdown behind it, and the underlying values
+        (e.g. resting heart rate in bpm, HRV in ms, sleep duration) together with your personal
+        baselines</td>
+        <td>App storage on your device</td>
+        <td>Until you delete the app</td>
+      </tr>
+      <tr>
+        <td>Intra-day score snapshots, used to draw the timeline</td>
+        <td>App storage on your device</td>
+        <td>30 days, then deleted automatically</td>
+      </tr>
+      <tr>
+        <td>If you sign in: your display name, an account identifier from Apple or Google, and
+        which of the two you used</td>
+        <td>Your device's Keychain, marked so it is excluded from iCloud Keychain and from
+        encrypted device backups</td>
+        <td>Until you sign out or delete the app</td>
+      </tr>
+      <tr>
+        <td>A cached copy of the Playbook articles, so the tab works offline</td>
+        <td>App storage on your device</td>
+        <td>Refreshed periodically; cleared when you delete the app</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>
+    If you have an Apple Watch paired, your current score and its top factors are sent to your own
+    Watch so it can display them. That transfer is directly between your two devices, over Apple's
+    device-to-device connection. It does not pass through us.
+  </p>
+
+  <h2 id="signin">4. Signing in (optional)</h2>
+  <p>
+    Cirrus works completely without an account — every feature, including your recovery score,
+    history and the Playbook. If you choose to sign in, you can use Sign in with Apple or Sign in
+    with Google.
+  </p>
+  <p>
+    <strong>We do not operate a user account system.</strong> Nothing about you is created or
+    stored on our servers when you sign in. The name and identifier we receive are written to your
+    device's Keychain and stay there.
+  </p>
+  <p>
+    Signing in does mean interacting with Apple or Google, who each handle that under their own
+    privacy policies and as their own data controllers:
+  </p>
+  <ul>
+    <li>
+      <strong>Sign in with Google.</strong> Google's SDK is embedded in the app. Google's own
+      published disclosure states that it may collect name, email address, phone number, coarse
+      location, user ID, device ID and usage data, some of it for analytics purposes, linked to
+      you. That collection is Google's, under
+      <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>,
+      and it only happens if you tap the Google button. If you would rather not, use Sign in with
+      Apple, or don't sign in at all.
+    </li>
+    <li>
+      <strong>Sign in with Apple.</strong> Handled by Apple under
+      <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>.
+      Apple offers to hide your email address if you prefer.
+    </li>
+  </ul>
+
+  <h2 id="leaves">5. What leaves your device</h2>
+  <p>
+    We want to be precise here rather than claim more than is true.
+  </p>
+  <p>
+    <strong>Your health data and your account identifier never leave your device.</strong> That is
+    a property of how the app is built, not a promise about how we behave.
+  </p>
+  <p>
+    <strong>One thing does reach a server we control.</strong> The Playbook tab downloads its
+    articles from our content host (Supabase, on servers in the European Union). That request is
+    anonymous — it carries no account identifier, no device identifier and no health data — but
+    like any request to any website, it necessarily reveals your <strong>IP address</strong> and
+    basic technical information (such as the time of the request) to that host, and those appear
+    in its access logs.
+  </p>
+  <p>
+    We use this only to serve you the content and to keep the service working and secure. We do not
+    use it to build a profile of you, and we do not combine it with anything else — we have nothing
+    else to combine it with.
+  </p>
+
+  <h2 id="never">6. What we never do</h2>
+  <ul>
+    <li>We do not sell your personal data, and we never will.</li>
+    <li>We run no advertising, and the app contains no advertising identifier and no ad SDK.</li>
+    <li>We run no analytics and no crash-reporting service. Cirrus contains none.</li>
+    <li>We do not track you across other apps or websites. The app asks for no tracking permission because it does nothing that would need one.</li>
+    <li>We do not use your health data for marketing, or share it with data brokers, insurers or employers.</li>
+    <li>We do not access your location. The app contains no location code.</li>
+  </ul>
+
+  <h2 id="legal">7. Legal bases</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>What</th><th>Legal basis</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Reading Apple Health data and computing your score, on your device</td>
+        <td>Your explicit permission, given through Apple's Health permission screen and revocable
+        there at any time. Because the results never reach us, we do not process this data as a
+        controller.</td>
+      </tr>
+      <tr>
+        <td>Serving Playbook content (and the IP address in the resulting server logs)</td>
+        <td>Our legitimate interest in delivering the content you requested and keeping the service
+        operating securely (GDPR Article 6(1)(f))</td>
+      </tr>
+      <tr>
+        <td>Keeping you signed in, if you chose to sign in</td>
+        <td>Performance of the service you asked for (GDPR Article 6(1)(b))</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 id="rights">8. Your rights</h2>
+  <p>Under the GDPR you have the right to:</p>
+  <ul>
+    <li>access the personal data we hold about you;</li>
+    <li>have it corrected if it is wrong;</li>
+    <li>have it erased;</li>
+    <li>restrict or object to our processing of it;</li>
+    <li>receive it in a portable format;</li>
+    <li>withdraw consent at any time, without affecting anything done before you withdrew it.</li>
+  </ul>
+  <p>
+    In practice, the honest answer for most of these is that <strong>we hold almost nothing about
+    you</strong>. Your health data and your recovery history are on your device, not with us — so:
+  </p>
+  <ul>
+    <li>
+      <strong>To see or export your data:</strong> it is in the app, on your device. We cannot show
+      you a copy because we do not have one.
+    </li>
+    <li>
+      <strong>To erase your health data:</strong> delete the app. That removes the recovery history
+      and the stored sign-in record from your device. You can separately revoke Cirrus's access to
+      Apple Health in iOS Settings → Health → Data Access &amp; Devices at any time, which stops
+      any further reading immediately.
+    </li>
+    <li>
+      <strong>To sign out:</strong> Settings → Account → Sign out, inside the app. Your recovery
+      data stays on your device.
+    </li>
+    <li>
+      <strong>For the server access logs described in section 5:</strong> write to us at the
+      address in section 1. Please note we can only identify log entries as yours if you can tell
+      us the IP address and approximate time — otherwise there is nothing that links those records
+      to you, which is itself a privacy protection rather than an evasion.
+    </li>
+  </ul>
+
+  <h2 id="retention">9. How long we keep things</h2>
+  <p>
+    We keep no personal data about you on our systems beyond the server access logs described in
+    section 5, which our content host retains for a limited period as part of normal service
+    operation and security. Everything else lives on your device for as long as you keep the app,
+    as set out in section 3.
+  </p>
+
+  <h2 id="transfers">10. Where data is processed</h2>
+  <p>
+    Our content host processes requests on servers located in the European Union. Because the only
+    data involved is the technical request information described in section 5, no health data is
+    transferred anywhere, inside or outside the EU.
+  </p>
+
+  <h2 id="children">11. Children</h2>
+  <p>
+    Cirrus is not intended for children. The app is rated for users aged 16 and over, and we do not
+    knowingly collect data from anyone under 16. If you believe a child has used the app in a way
+    that concerns you, contact us at the address in section 1.
+  </p>
+
+  <h2 id="changes">12. Changes to this policy</h2>
+  <p>
+    If we change how Cirrus handles data, we will update this policy and change the date at the
+    top. If a change is significant — in particular, if Cirrus ever begins transmitting health data
+    off your device, which it does not do today — we will make that clear in the app itself rather
+    than relying on you to re-read this page.
+  </p>
+
+  <h2 id="complaints">13. Complaints</h2>
+  <p>
+    If you think we have handled your data improperly, please contact us first — we would rather
+    fix it. You also have the right to lodge a complaint with the French data protection authority:
+  </p>
+  <p>
+    <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong><br>
+    3 Place de Fontenoy — TSA 80715, 75334 Paris Cedex 07, France<br>
+    <a href="https://www.cnil.fr/en/plaintes" rel="noopener">www.cnil.fr/en/plaintes</a>
+  </p>
+  <p>
+    If you live outside France, you may instead complain to your own country's data protection
+    authority.
+  </p>
+
+  <footer>
+    Cirrus — computed on your device, stored on your device.
+  </footer>
+
+</main>
+</body>
+</html>

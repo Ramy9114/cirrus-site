@@ -1,0 +1,18 @@
+# Response headers applied by Cloudflare Pages.
+#
+# The CSP is deliberately near-total: both pages are self-contained HTML with an
+# inline <style> block and load NO external resources — no scripts, no fonts, no
+# images, no analytics. `default-src 'none'` is therefore accurate rather than
+# aspirational, and it should FAIL LOUDLY if anyone later adds a tracker or a
+# webfont to a privacy policy page, which is exactly the point.
+#
+# `style-src 'unsafe-inline'` is required only because the CSS is inlined in each
+# page. Outbound links (Google, Apple, CNIL) are navigations, not resource loads,
+# so they are unaffected by any of this.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), interest-cohort=()
+  Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
