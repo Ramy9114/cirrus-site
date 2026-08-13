@@ -5,9 +5,9 @@ no dependencies, no JavaScript.
 
 | File | Serves | Why it exists |
 |---|---|---|
-| `index.html` | `/` | Landing page, and the link target Washington's MHMD calls a "homepage" if that ever applies |
-| `privacy.html` | `/privacy` | The privacy policy. **Required** — App Store Guideline 5.1.1(i) needs a reachable policy URL in App Store Connect *and* an in-app link |
-| `_headers` | — | Security headers applied by Cloudflare Pages |
+| `public/index.html` | `/` | Landing page, and the link target Washington's MHMD calls a "homepage" if that ever applies |
+| `public/privacy.html` | `/privacy` | The privacy policy. **Required** — App Store Guideline 5.1.1(i) needs a reachable policy URL in App Store Connect *and* an in-app link |
+| `public/_headers` | — | Security headers applied at the edge |
 
 ## Why this repo is separate from the app
 
@@ -22,23 +22,24 @@ users actually read is this one.
 
 ## Deploying
 
-Cloudflare Pages, connected to this repo. Auto-deploys on every push to `main`.
+Deployed to Cloudflare as a **static-assets Worker**, connected to this repo, auto-deploying on
+every push to `main`.
 
-**Build settings** (all defaults except the framework):
+**`wrangler.jsonc` is the whole configuration** — no build step, no server-side code. It exists
+because an unconfigured `wrangler deploy` has to guess, and its guess published the entire repo
+root (README included) as public URLs while reporting a green build. Only `public/` is servable
+now, so adding a file to the repo root can never accidentally put it on the internet.
 
 | Setting | Value |
 |---|---|
-| Framework preset | **None** |
-| Build command | *(leave empty)* |
-| Build output directory | `/` |
+| Build command | *(none)* |
+| Deploy command | `npx wrangler deploy` |
 | Root directory | `/` |
-
-There is no build step. Cloudflare serves these files as-is.
 
 ### Clean URLs
 
-Cloudflare Pages serves `privacy.html` at `/privacy` automatically. `index.html`'s link points at
-`/privacy` for that reason — do not "fix" it to `/privacy.html`.
+Workers Static Assets serves `public/privacy.html` at `/privacy` automatically. `index.html`'s link
+points at `/privacy` for that reason — do not "fix" it to `/privacy.html`.
 
 ## Before this can go live
 

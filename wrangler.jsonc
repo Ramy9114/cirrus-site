@@ -1,0 +1,15 @@
+{
+  // Deploys this repo as a static-assets Worker. There is no server-side code and no
+  // build step — `assets.directory` is the whole configuration.
+  //
+  // This file exists because without it `wrangler deploy` has to guess, and its guess
+  // was wrong in two ways: it can report a green build without actually serving the
+  // pages, and it would publish EVERYTHING at the repo root — including README.md and
+  // .gitignore — as public URLs. Only `public/` is servable now, so adding a file to
+  // the repo root can never accidentally put it on the internet.
+  "name": "cirrus",
+  "compatibility_date": "2026-08-13",
+  "assets": {
+    "directory": "./public"
+  }
+}
