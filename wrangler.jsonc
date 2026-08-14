@@ -1,15 +1,20 @@
 {
-  // Deploys this repo as a static-assets Worker. There is no server-side code and no
-  // build step — `assets.directory` is the whole configuration.
+  // Cloudflare **Pages** project configuration. There is no build step and no
+  // server-side code — `pages_build_output_dir` is the whole thing.
   //
-  // This file exists because without it `wrangler deploy` has to guess, and its guess
-  // was wrong in two ways: it can report a green build without actually serving the
-  // pages, and it would publish EVERYTHING at the repo root — including README.md and
-  // .gitignore — as public URLs. Only `public/` is servable now, so adding a file to
-  // the repo root can never accidentally put it on the internet.
-  "name": "cirrus",
-  "compatibility_date": "2026-08-13",
-  "assets": {
-    "directory": "./public"
-  }
+  // Only `public/` is published. Anything at the repo root (README.md, this file,
+  // .gitignore) is invisible to the internet, so adding a file to the root can never
+  // accidentally serve it.
+  //
+  // Was previously a Workers config (`assets.directory`). Moved to Pages because a
+  // Workers URL is `<worker>.<account-subdomain>.workers.dev`, and the account
+  // subdomain is derived from the account's email local-part — publishing the privacy
+  // policy at that address would have leaked the owner's email in the URL of the very
+  // document promising not to leak things. Pages URLs are a single label with no
+  // account identifier in them.
+  //
+  // `name` must match the Pages project name in the dashboard.
+  "name": "cirrusapp",
+  "compatibility_date": "2026-08-14",
+  "pages_build_output_dir": "./public"
 }

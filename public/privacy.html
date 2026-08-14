@@ -37,8 +37,11 @@
   /* Masthead, and also the way back to the site root — this page is frequently the
      first and only page anyone lands on, reached from the App Store listing or from
      inside the app itself. */
-  .masthead { display: block; line-height: 0; margin: 0 0 1.75rem; }
-  .masthead img { width: 132px; max-width: 46%; height: auto; }
+  /* Centred: the masthead is the page's crown, and left-aligning it against a
+     left-aligned document made it read as a stray element rather than a header.
+     Body copy stays left-aligned — centred prose is materially harder to read. */
+  .masthead { display: block; line-height: 0; margin: 0 0 2rem; text-align: center; }
+  .masthead img { width: 148px; max-width: 50%; height: auto; }
   /* Cream-on-transparent artwork drawn for a dark ground; darkened here rather than
      shipping a second asset, so there is one logo file shared with the app's own
      SplashLogo. */

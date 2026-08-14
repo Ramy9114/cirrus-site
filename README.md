@@ -22,23 +22,26 @@ users actually read is this one.
 
 ## Deploying
 
-Deployed to Cloudflare as a **static-assets Worker**, connected to this repo, auto-deploying on
-every push to `main`.
+Deployed to **Cloudflare Pages**, connected to this repo, auto-deploying on every push to `main`.
 
-**`wrangler.jsonc` is the whole configuration** — no build step, no server-side code. It exists
-because an unconfigured `wrangler deploy` has to guess, and its guess published the entire repo
-root (README included) as public URLs while reporting a green build. Only `public/` is servable
-now, so adding a file to the repo root can never accidentally put it on the internet.
+**`wrangler.jsonc` is the whole configuration** — no build step, no server-side code. Only
+`public/` is published, so adding a file to the repo root can never accidentally put it on the
+internet.
+
+**Why Pages and not Workers:** a Workers URL is `<worker>.<account-subdomain>.workers.dev`, and the
+account subdomain is derived from the account's email local-part. Serving the privacy policy from
+that address leaked the owner's email in the URL of the document promising not to leak things.
+Pages URLs are a single label with no account identifier.
 
 | Setting | Value |
 |---|---|
+| Framework preset | **None** |
 | Build command | *(none)* |
-| Deploy command | `npx wrangler deploy` |
-| Root directory | `/` |
+| Build output directory | `public` |
 
 ### Clean URLs
 
-Workers Static Assets serves `public/privacy.html` at `/privacy` automatically. `index.html`'s link
+Cloudflare Pages serves `public/privacy.html` at `/privacy` automatically. `index.html`'s link
 points at `/privacy` for that reason — do not "fix" it to `/privacy.html`.
 
 ## Before this can go live

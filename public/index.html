@@ -39,7 +39,10 @@
   main { max-width: 32rem; width: 100%; }
   /* The wordmark IS the logo, so the h1 carries the image and keeps its text in `alt`
      for screen readers and for the case where the image fails to load. */
-  h1 { margin: 0 0 .5rem; line-height: 0; }
+  /* Logo and tagline centred as a unit — they read as one masthead, and a left-aligned
+     logo above centred-width content looked like a stray element. The prose below stays
+     left-aligned, because centred paragraphs are harder to read. */
+  h1 { margin: 0 0 .5rem; line-height: 0; text-align: center; }
   h1 img { width: 210px; max-width: 62%; height: auto; }
   /* The artwork is cream-on-transparent, drawn for a dark ground — on a light one it
      would all but vanish. Darkening rather than shipping a second asset: one file to
@@ -47,7 +50,7 @@
   @media (prefers-color-scheme: light) {
     h1 img { filter: brightness(.32) saturate(1.45); }
   }
-  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 2.5rem; }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 2.5rem; text-align: center; }
   .claim {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 12px; padding: 1.25rem 1.35rem; margin: 0 0 2.5rem;
