@@ -22,7 +22,30 @@ users actually read is this one.
 
 ## Deploying
 
-Deployed to **Cloudflare Pages**, connected to this repo, auto-deploying on every push to `main`.
+> ⚠️ ~~Deployed to **Cloudflare Pages**, connected to this repo, auto-deploying on every push to `main`.~~
+> **Wrong, corrected 14/08/2026 — there is no Git connection and pushing publishes nothing.**
+> The Pages project was created by direct wrangler upload, so GitHub and Cloudflare are not linked.
+> This was caught the hard way: a commit fixing two publicly-served `TO FILL IN` placeholders in the
+> privacy policy was pushed, reported as deployed, and changed nothing on the live site for another
+> two minutes until `wrangler pages deployment list` showed the newest deployment still pointing at
+> the *previous* commit.
+
+**Deploying is a manual step. Run it from the repo root after every push:**
+
+```bash
+npx wrangler pages deploy public --project-name cirrusapp --branch main
+```
+
+Then **verify against the live URL, not the deploy output** — a successful upload prints a
+per-deployment hostname (`https://<hash>.cirrusapp.pages.dev`), which is live long before the
+canonical `cirrusapp.pages.dev` stops serving the edge-cached previous version:
+
+```bash
+curl -sS https://cirrusapp.pages.dev/privacy | grep -c "TO FILL IN"
+```
+
+A stale read on the canonical URL right after deploying is normal edge caching, not a failed
+deploy; append a cache-busting query (`?cb=1`) to tell the two apart.
 
 **`wrangler.jsonc` is the whole configuration** — no build step, no server-side code. Only
 `public/` is published, so adding a file to the repo root can never accidentally put it on the
