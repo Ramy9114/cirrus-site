@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Cirrus</title>
+<style>
+  :root {
+    --bg: #16140f;
+    --surface: #201d17;
+    --text: #f2ede3;
+    --muted: #b8ae9c;
+    --accent: #d9ab74;
+    --rule: #35302708;
+    --border: #353027;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #faf8f4;
+      --surface: #ffffff;
+      --text: #1c1a15;
+      --muted: #5f5849;
+      --accent: #9a6b2f;
+      --border: #e4ded2;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  .masthead { display: block; line-height: 0; margin: 0 0 2rem; text-align: center; }
+  .masthead img { width: 148px; max-width: 50%; height: auto; }
+  @media (prefers-color-scheme: light) {
+    .masthead img { filter: brightness(.32) saturate(1.45); }
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -0.02em; }
+  h2 {
+    font-size: 1.15rem; margin: 2.75rem 0 .75rem; letter-spacing: -0.01em;
+    padding-top: 1.25rem; border-top: 1px solid var(--border);
+  }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--accent); }
+  .updated { color: var(--muted); font-size: .875rem; margin: 0 0 .5rem; }
+  .lang-switch { color: var(--muted); font-size: .875rem; margin: 0 0 2rem; }
+  .summary {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem 1.35rem; margin: 0 0 1rem;
+  }
+  .summary h2 { margin-top: 0; padding-top: 0; border-top: none; font-size: 1.05rem; }
+  .summary ul { margin: .5rem 0 0; padding-left: 1.15rem; }
+  .summary li { margin: .45rem 0; }
+  ul, ol { padding-left: 1.35rem; }
+  li { margin: .4rem 0; }
+  a { color: var(--accent); }
+  code {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: .1rem .35rem; border-radius: 4px; font-size: .875em;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .925rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .875rem; }
+  .table-wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+
+  <a class="masthead" href="/"><img src="/logo.png" alt="Cirrus" width="420" height="260"></a>
+
+  <h1>Politique de confidentialité de Cirrus</h1>
+  <p class="updated">Dernière mise à jour : 15 août 2026</p>
+  <p class="lang-switch"><a href="/privacy">Read this in English</a></p>
+
+  <div class="summary">
+    <h2>L'essentiel</h2>
+    <ul>
+      <li><strong>Vos données de santé ne quittent jamais votre iPhone.</strong> Cirrus les lit dans Apple Santé, calcule votre score de récupération sur l'appareil et enregistre le résultat sur l'appareil. Nous ne les recevons jamais, et nous ne pourrions pas y accéder même si nous le voulions.</li>
+      <li><strong>Vous n'avez pas besoin de compte.</strong> L'application fonctionne intégralement sans cela. La connexion est facultative et ne stocke rien sur nos serveurs.</li>
+      <li><strong>Nous n'utilisons ni analytique ni publicité.</strong> Il n'y a aucun SDK de suivi, aucun outil de rapport de plantage, et aucun identifiant publicitaire dans l'application.</li>
+      <li><strong>Nous ne vendons jamais vos données.</strong> Il n'y a rien à vendre — nous ne les détenons pas.</li>
+      <li><strong>Une seule chose nous parvient :</strong> lorsque l'application télécharge les articles du Playbook, cette requête révèle votre adresse IP à notre hébergeur de contenu, de la même manière que la visite de n'importe quel site web. Détails dans « <a href="#leaves">Ce qui quitte votre appareil</a> ».</li>
+    </ul>
+  </div>
+
+  <h2 id="who">1. Qui est responsable de vos données</h2>
+  <p>
+    Le responsable du traitement des données pour Cirrus est <strong>Rami Moubayed</strong>,
+    basé à Paris, France.
+  </p>
+  <p>
+    Pour toute question relative à cette politique — questions, demandes, réclamations — écrivez à
+    <a href="mailto:cirrus.privacy@gmail.com">cirrus.privacy@gmail.com</a>.
+    Nous visons à répondre dans un délai de 30 jours, le délai fixé par le RGPD.
+  </p>
+
+  <h2 id="health">2. Données de santé</h2>
+  <p>
+    Cirrus lit les données suivantes dans Apple Santé, avec votre autorisation explicite, que vous
+    accordez via l'écran d'autorisation propre à Apple et que vous pouvez retirer à tout moment dans
+    Réglages iOS → Santé → Accès aux données et appareils → Cirrus :
+  </p>
+  <ul>
+    <li>Fréquence cardiaque au repos</li>
+    <li>Fréquence cardiaque moyenne à la marche</li>
+    <li>Variabilité de la fréquence cardiaque (SDNN)</li>
+    <li>Fréquence respiratoire</li>
+    <li>Saturation en oxygène du sang</li>
+    <li>Énergie active dépensée</li>
+    <li>Analyse du sommeil (temps au lit, éveil, sommeil léger, profond et paradoxal)</li>
+    <li>Séances d'entraînement (type, heure de début, durée, énergie dépensée, fréquence cardiaque moyenne)</li>
+  </ul>
+  <p>
+    Cirrus ne fait que <em>lire</em> les données d'Apple Santé. Elle n'y écrit jamais rien.
+  </p>
+  <p>
+    Tout est traité <strong>sur votre appareil</strong>, par du code exécuté sur votre iPhone, afin
+    de produire un score de récupération quotidien compris entre 0 et 100 ainsi qu'une décomposition
+    des facteurs qui le composent. <strong>Aucune de ces données n'est transmise à nous-mêmes ni à
+    quiconque.</strong> Aucun serveur ne les reçoit. Nous n'en avons aucune copie, aucune sauvegarde,
+    et aucune capacité à les récupérer.
+  </p>
+  <p>
+    Ce traitement ayant lieu entièrement sur votre propre appareil, sous votre contrôle, et les
+    résultats nous étant totalement inaccessibles, les lignes directrices de la CNIL (délibération
+    n° 2025-024) considèrent qu'une application de cette nature constitue un logiciel que vous
+    exploitez plutôt qu'un service que nous exploitons. Nous la décrivons ici intégralement malgré
+    tout, car vous avez le droit de savoir ce que l'application fait de vos données, que nous en
+    soyons légalement responsables ou non à cette étape précise.
+  </p>
+
+  <h2 id="stored">3. Ce que Cirrus stocke sur votre appareil</h2>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Quoi</th><th>Où</th><th>Conservé pendant</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Votre score de récupération quotidien, la décomposition des facteurs qui le composent, et
+        les valeurs sous-jacentes (par exemple la fréquence cardiaque au repos en bpm, la VFC en ms,
+        la durée de sommeil), ainsi que vos références personnelles</td>
+        <td>Stockage de l'application sur votre appareil</td>
+        <td>Jusqu'à la suppression de l'application</td>
+      </tr>
+      <tr>
+        <td>Instantanés du score en cours de journée, utilisés pour tracer la chronologie</td>
+        <td>Stockage de l'application sur votre appareil</td>
+        <td>30 jours, puis suppression automatique</td>
+      </tr>
+      <tr>
+        <td>Si vous vous connectez : votre nom d'affichage, un identifiant de compte fourni par Apple
+        ou Google, et lequel des deux vous avez utilisé</td>
+        <td>Le trousseau (Keychain) de votre appareil, marqué de façon à être exclu du trousseau
+        iCloud et des sauvegardes chiffrées de l'appareil</td>
+        <td>Jusqu'à la déconnexion ou la suppression de l'application</td>
+      </tr>
+      <tr>
+        <td>Une copie mise en cache des articles du Playbook, afin que cet onglet fonctionne hors
+        ligne</td>
+        <td>Stockage de l'application sur votre appareil</td>
+        <td>Actualisée périodiquement ; effacée à la suppression de l'application</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>
+    Si une Apple Watch est associée, votre score actuel et ses principaux facteurs lui sont envoyés
+    afin qu'elle puisse les afficher. Ce transfert s'effectue directement entre vos deux appareils,
+    via la connexion d'appareil à appareil d'Apple. Il ne transite pas par nous.
+  </p>
+
+  <h2 id="signin">4. Connexion (facultative)</h2>
+  <p>
+    Cirrus fonctionne intégralement sans compte — toutes les fonctionnalités, y compris votre score
+    de récupération, votre historique et le Playbook. Si vous choisissez de vous connecter, vous
+    pouvez utiliser Se connecter avec Apple ou Se connecter avec Google.
+  </p>
+  <p>
+    <strong>Nous n'exploitons aucun système de comptes utilisateurs.</strong> Rien vous concernant
+    n'est créé ni stocké sur nos serveurs lors de la connexion. Le nom et l'identifiant que nous
+    recevons sont enregistrés dans le trousseau de votre appareil et y demeurent.
+  </p>
+  <p>
+    Se connecter implique toutefois d'interagir avec Apple ou Google, qui traitent chacun cette
+    opération selon leur propre politique de confidentialité et en tant que responsables de
+    traitement à part entière :
+  </p>
+  <ul>
+    <li>
+      <strong>Se connecter avec Google.</strong> Le SDK de Google est intégré à l'application. La
+      déclaration publique de Google indique qu'il peut collecter le nom, l'adresse e-mail, le
+      numéro de téléphone, la localisation approximative, l'identifiant utilisateur, l'identifiant
+      de l'appareil et des données d'utilisation, certaines à des fins d'analyse, associées à votre
+      identité. Cette collecte relève de Google, selon la
+      <a href="https://policies.google.com/privacy" rel="noopener">politique de confidentialité de Google</a>,
+      et n'a lieu que si vous appuyez sur le bouton Google. Si vous préférez l'éviter, utilisez Se
+      connecter avec Apple, ou ne vous connectez pas du tout.
+    </li>
+    <li>
+      <strong>Se connecter avec Apple.</strong> Gérée par Apple selon la
+      <a href="https://www.apple.com/legal/privacy/" rel="noopener">politique de confidentialité d'Apple</a>.
+      Apple propose de masquer votre adresse e-mail si vous le souhaitez.
+    </li>
+  </ul>
+
+  <h2 id="leaves">5. Ce qui quitte votre appareil</h2>
+  <p>
+    Nous tenons à être précis ici plutôt que d'affirmer plus que ce qui est vrai.
+  </p>
+  <p>
+    <strong>Vos données de santé et votre identifiant de compte ne quittent jamais votre
+    appareil.</strong> C'est une caractéristique de la conception de l'application, et non une
+    simple promesse quant à notre comportement.
+  </p>
+  <p>
+    <strong>Une seule chose atteint un serveur que nous contrôlons.</strong> L'onglet Playbook
+    télécharge ses articles depuis notre hébergeur de contenu (Supabase — la section 10 explique où
+    cela se situe et ce que cela implique). Cette requête est
+    anonyme — elle ne comporte ni identifiant de compte, ni identifiant d'appareil, ni donnée de
+    santé — mais, comme toute requête adressée à n'importe quel site web, elle révèle nécessairement
+    votre <strong>adresse IP</strong> et des informations techniques de base (comme l'heure de la
+    requête) à cet hébergeur, lesquelles apparaissent dans ses journaux d'accès.
+  </p>
+  <p>
+    Nous n'utilisons ces informations que pour vous fournir le contenu et maintenir le service en
+    fonctionnement et sécurisé. Nous ne les utilisons pas pour établir un profil vous concernant, et
+    nous ne les combinons avec rien d'autre — nous n'avons rien d'autre avec quoi les combiner.
+  </p>
+
+  <h2 id="never">6. Ce que nous ne faisons jamais</h2>
+  <ul>
+    <li>Nous ne vendons pas vos données personnelles, et nous ne le ferons jamais.</li>
+    <li>Nous ne diffusons aucune publicité, et l'application ne contient aucun identifiant publicitaire ni SDK publicitaire.</li>
+    <li>Nous n'utilisons aucun service d'analytique ni de rapport de plantage. Cirrus n'en contient aucun.</li>
+    <li>Nous ne vous suivons pas à travers d'autres applications ou sites web. L'application ne demande aucune autorisation de suivi, car elle ne fait rien qui en nécessiterait une.</li>
+    <li>Nous n'utilisons pas vos données de santé à des fins commerciales, et nous ne les partageons ni avec des courtiers en données, ni avec des assureurs, ni avec des employeurs.</li>
+    <li>Nous n'accédons pas à votre localisation. L'application ne contient aucun code de géolocalisation.</li>
+  </ul>
+
+  <h2 id="legal">7. Fondements juridiques</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Quoi</th><th>Fondement juridique</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Lecture des données Apple Santé et calcul de votre score, sur votre appareil</td>
+        <td>Votre autorisation explicite, donnée via l'écran d'autorisation Santé d'Apple et
+        révocable à tout moment à cet endroit. Les résultats ne nous parvenant jamais, nous ne
+        traitons pas ces données en tant que responsable de traitement.</td>
+      </tr>
+      <tr>
+        <td>Fourniture du contenu du Playbook (et l'adresse IP figurant dans les journaux serveur qui en résultent)</td>
+        <td>Notre intérêt légitime à vous fournir le contenu demandé et à assurer le fonctionnement
+        sécurisé du service (article 6, paragraphe 1, point f) du RGPD)</td>
+      </tr>
+      <tr>
+        <td>Maintien de votre connexion, si vous avez choisi de vous connecter</td>
+        <td>Exécution du service que vous avez demandé (article 6, paragraphe 1, point b) du RGPD)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 id="rights">8. Vos droits</h2>
+  <p>En vertu du RGPD, vous disposez du droit :</p>
+  <ul>
+    <li>d'accéder aux données personnelles que nous détenons à votre sujet ;</li>
+    <li>de les faire rectifier si elles sont inexactes ;</li>
+    <li>de les faire effacer ;</li>
+    <li>de limiter ou de vous opposer à leur traitement ;</li>
+    <li>de les recevoir dans un format portable ;</li>
+    <li>de retirer votre consentement à tout moment, sans que cela n'affecte les traitements effectués avant ce retrait.</li>
+  </ul>
+  <p>
+    En pratique, la réponse honnête à la plupart de ces droits est que <strong>nous ne détenons
+    presque rien vous concernant</strong>. Vos données de santé et votre historique de récupération
+    se trouvent sur votre appareil, pas chez nous — ainsi :
+  </p>
+  <ul>
+    <li>
+      <strong>Pour consulter ou exporter vos données :</strong> elles se trouvent dans l'application,
+      sur votre appareil. Nous ne pouvons pas vous en montrer une copie car nous n'en possédons
+      aucune.
+    </li>
+    <li>
+      <strong>Pour effacer vos données de santé :</strong> supprimez l'application. Cela retire de
+      votre appareil l'historique de récupération et les informations de connexion enregistrées.
+      Vous pouvez également révoquer à tout moment l'accès de Cirrus à Apple Santé dans Réglages
+      iOS → Santé → Accès aux données et appareils, ce qui arrête immédiatement toute nouvelle
+      lecture.
+    </li>
+    <li>
+      <strong>Pour vous déconnecter :</strong> Réglages → Compte → Se déconnecter, dans
+      l'application. Vos données de récupération restent sur votre appareil.
+    </li>
+    <li>
+      <strong>Concernant les journaux d'accès serveur décrits à la section 5 :</strong> écrivez-nous
+      à l'adresse indiquée à la section 1. Veuillez noter que nous ne pouvons identifier une entrée
+      de journal comme étant la vôtre que si vous êtes en mesure de nous indiquer l'adresse IP et
+      l'heure approximative — en l'absence de ces informations, rien ne relie ces enregistrements à
+      vous, ce qui constitue en soi une protection de la vie privée et non une esquive.
+    </li>
+  </ul>
+
+  <h2 id="retention">9. Durée de conservation</h2>
+  <p>
+    Nous ne conservons sur nos systèmes aucune donnée personnelle vous concernant, hormis les
+    journaux d'accès serveur décrits à la section 5, que notre hébergeur de contenu conserve pendant
+    une durée limitée dans le cadre du fonctionnement normal et de la sécurité du service. Tout le
+    reste réside sur votre appareil aussi longtemps que vous conservez l'application, comme indiqué
+    à la section 3.
+  </p>
+
+  <h2 id="transfers">10. Où les données sont traitées</h2>
+  <p>
+    Cette section ne concerne que les informations techniques de requête décrites à la section 5 —
+    votre adresse IP et les données de journal de base. <strong>Vos données de santé ne sont
+    transférées nulle part, puisqu'elles ne quittent jamais votre appareil.</strong>
+  </p>
+  <p>
+    Le contenu du Playbook est stocké sur des serveurs situés en <strong>Irlande</strong>. Mais la
+    société avec laquelle nous contractons pour cet hébergement, <strong>Supabase Pte. Ltd, est
+    établie à Singapour</strong>, et peut accéder à cette infrastructure depuis là-bas. En vertu du
+    droit européen, cela constitue un transfert de données personnelles en dehors de l'Espace
+    économique européen, quel que soit le lieu où se trouvent physiquement les serveurs. Les
+    journaux d'accès contenant votre adresse IP sont traités par les systèmes internes propres à cet
+    hébergeur, distincts du stockage du contenu et pas nécessairement situés dans la même région.
+  </p>
+  <p>
+    <strong>Singapour ne fait l'objet d'aucune décision d'adéquation de la Commission
+    européenne.</strong> Le transfert s'appuie donc sur les <strong>clauses contractuelles
+    types</strong> — la garantie approuvée par la Commission européenne au titre de l'article 46,
+    paragraphe 2, point c) du RGPD — qui font partie de notre accord de traitement des données avec
+    Supabase. Vous pouvez les consulter dans l'
+    <a href="https://supabase.com/legal/dpa">avenant de traitement des données</a> publié par
+    Supabase, et nous vous en enverrons une copie sur demande à l'adresse indiquée à la section 1.
+  </p>
+  <p>
+    <strong>Cette page elle-même est servie par Cloudflare</strong> (Cloudflare, Inc., États-Unis) ;
+    charger cette politique révèle donc votre adresse IP à cette société, de la même manière
+    ordinaire. Ce transfert s'appuie également sur les clauses contractuelles types, selon les
+    propres conditions de traitement des données de Cloudflare.
+  </p>
+  <p>
+    Nous avons évalué ces deux transferts au regard du droit de ces pays et maintenons cette
+    évaluation à jour. Les données concernées se limitent à une adresse IP et à des informations
+    techniques de base, conservées pendant une courte durée, et ne peuvent être associées à aucune
+    donnée de santé — puisque nous n'en détenons aucune.
+  </p>
+
+  <h2 id="children">11. Mineurs</h2>
+  <p>
+    Cirrus n'est pas destinée aux enfants. L'application est classée pour les utilisateurs âgés de
+    16 ans et plus, et nous ne collectons sciemment aucune donnée provenant d'une personne de moins
+    de 16 ans. Si vous pensez qu'un enfant a utilisé l'application d'une manière qui vous préoccupe,
+    contactez-nous à l'adresse indiquée à la section 1.
+  </p>
+
+  <h2 id="changes">12. Modifications de cette politique</h2>
+  <p>
+    Si nous modifions la manière dont Cirrus traite les données, nous mettrons à jour cette
+    politique et changerons la date en haut de page. Si un changement est significatif — en
+    particulier si Cirrus venait à transmettre un jour des données de santé hors de votre appareil,
+    ce qu'elle ne fait pas aujourd'hui — nous le préciserons clairement dans l'application
+    elle-même plutôt que de compter sur une relecture de cette page.
+  </p>
+
+  <h2 id="complaints">13. Réclamations</h2>
+  <p>
+    Si vous estimez que nous avons traité vos données de manière inappropriée, veuillez d'abord
+    nous contacter — nous préférons corriger la situation. Vous avez également le droit
+    d'introduire une réclamation auprès de l'autorité française de protection des données :
+  </p>
+  <p>
+    <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong><br>
+    3 Place de Fontenoy — TSA 80715, 75334 Paris Cedex 07, France<br>
+    <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">www.cnil.fr/fr/plaintes</a>
+  </p>
+  <p>
+    Si vous résidez en dehors de la France, vous pouvez également adresser votre réclamation à
+    l'autorité de protection des données de votre pays.
+  </p>
+
+  <footer>
+    Cirrus — calculé sur votre appareil, stocké sur votre appareil.
+  </footer>
+
+</main>
+</body>
+</html>
